@@ -1,0 +1,110 @@
+@page
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+  <h1 class="display-4">Welcome</h1>
+  <p>We hope you like pizza. That's what we make here.</p>
+</div>
+
+<style>
+  div.button {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+  }
+  input:optional {
+    border-color: #ccc;
+  }
+  input:required {
+    border-color: mediumblue;
+  }
+  .text-primary{
+    color:#006ee5;
+  }
+  
+</style>
+
+
+<h2 class="display-6">Join our mailing list</h2>
+<p>Sign up to hear about all our special offers!</p>
+
+<form name="CustomerInfo">
+  <div class="container w-50 p-3">
+    <div class="row">
+      <div class="col-4">
+        <Label for="FName">First Name</Label> 
+      </div>
+      <div class="col-8">
+        <input type="text" id="FName" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <Label for="LName">Last Name</Label> 
+      </div>
+      <div class="col-8">
+        <input type="text" id="LName" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        Phone
+        <Label for="Phone">Phone</Label> 
+      </div>
+      <div class="col-8">
+        <input type="tel" id="Phone">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <Label for="Birthday">Birthday</Label> 
+      </div>
+      <div class="col-8">
+        <input type="date" id="Birthday">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <Label for="E-mail">E-mail Address</Label> 
+      </div>
+      <div class="col-8">
+        <input type="email" id="E-mail" required>
+      </div>
+    </div>
+    <div class="button">
+      <button class="btn btn-primary" type="submit">
+        Submit Form
+      </button>
+    </div>
+  </div>
+</form>
+
+<h2>All about our wonderful pizza!</h2>
+<p class="bg-light">We make it fresh every day, sometimes up to two or three times a day!<br><br>
+We love to make pizza!
+</p>
+
+<div class="text-center">
+  <img width="120" src="data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.226 112L36.2.2c60 
+16 74 49 81 84z' fill='%23ea8'/%3e%3cpath d='M.197 112L31 14C84 29 96 57 103 88z' fill='%23fea' /%3e%3c/svg%3e" alt="">
+</div>
+
+<nav>
+  <h2>We take your privacy seriously!</h2>
+  <p class="bg-light">Unlike other pizza restaurants that share your pizza preferences, we care about your privacy.<br><br>
+  View our <a href="/Privacy">privacy policy</a> for more information.
+  </p>
+</nav>
+
+<h2>Delivery options</h2>
+<p class="bg-light">There are a few ways we can get the pizza to you:<br>
+  - Postal mail<br>
+  - Dog sled<br>
+  - Drone (experimental!)
+</p>
